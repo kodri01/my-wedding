@@ -53,7 +53,7 @@
 }
 
 .bride .bride_couple span {
-    font-size: 3.4rem;
+    font-size: var(--fontSize-heading-base);
     font-family: var(--sacramento);
     font-weight: 400;
     margin-top: 1rem;
