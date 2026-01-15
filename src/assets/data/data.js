@@ -76,7 +76,7 @@ export const data = {
         {
             id: 1,
             name: 'Kodri',
-            icon: './src/assets/images/bca.png',
+            icon: './src/assets/images/bni.png',
             rekening: '2018544607'
         },
         {
