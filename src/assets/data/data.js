@@ -6,7 +6,7 @@ export const data = {
             child: 'Putra ke Tiga',
             father: '(Alm.) Mukhtar',
             mother: 'Ramah',
-            image: './src/assets/images/man.jpg'
+            image: './src/assets/images/man.png'
         },
         P: {
             id: 2,
@@ -14,10 +14,10 @@ export const data = {
             child: 'Putri ke Dua',
             father: 'M. Zen',
             mother: 'Ratna',
-            image: './src/assets/images/women.jpg'
+            image: './src/assets/images/women.png'
         },
 
-        couple: './src/assets/images/wedding.jpg'
+        couple: './src/assets/images/wedding.png'
     },
 
     time: {
