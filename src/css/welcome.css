@@ -33,18 +33,48 @@
     font-size: 2.4rem;
     font-family: var(--sacramento);
     font-weight: 400;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+    opacity: 100%;
+}
+
+.welcome figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.figure-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.figure-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 35%;
+}
+
+.figure-wrapper .bride-name {
+   position: absolute;
+    bottom: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-family: var(--sacramento);
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    z-index: 10;
+    line-height: 2.3rem;
 }
 
 /* .welcome figure {
-    display: inherit;
-    align-items: inherit;
-    justify-content: inherit;
-    flex-direction: inherit;
-    margin: 1rem 0;
-} */
-
-.welcome figure {
     position: absolute;
     top: 0;
     left: 0;
@@ -64,28 +94,19 @@
     box-shadow: none;
 }
 
-/* .welcome figure img {
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
-    box-shadow: var(--shadow-md);
-    border: 2px solid #fff;
-} */
-
 .welcome figure figcaption {
     font-size: 2.5rem;
     font-family: var(--sacramento);
     font-weight: 400;
-    margin-top: 0.5rem;
+} */
+
+.welcome p span{
+    font-size: 2.5rem;
+    line-height: 2.3rem;
+
 }
 
-.welcome p span {
-    font-size: 2rem;
-    margin: 1rem 0;
-    display: block;
-}
-
-.welcome button {
+.welcome button{
     display: inherit;
     align-items: inherit;
     justify-content: inherit;
@@ -96,6 +117,7 @@
     transition: var(--transition-small);
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .welcome button:hover {
