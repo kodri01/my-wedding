@@ -24,23 +24,45 @@ export const welcome = () => {
     //         </figcaption>`;
     // };
 
-    const generateFigureOverlay = (bride) => {
-        const {
-            L: { name: brideLName },
-            P: { name: bridePName },
-            couple: coupleImage,
-        } = bride;
+    // const generateFigureOverlay = (bride) => {
+    //     const {
+    //         L: { name: brideLName },
+    //         P: { name: bridePName },
+    //         couple: coupleImage,
+    //     } = bride;
 
-        // Ambil nama depan saja
-        const brideName = brideLName.split(",")[0];
-        const groomName = bridePName.split(",")[0];
+    //     // Ambil nama depan saja
+    //     const brideName = brideLName.split(",")[0];
+    //     const groomName = bridePName.split(",")[0];
+
+    //     return `
+    //     <div class="figure-wrapper">
+    //         <img src="${coupleImage}" alt="Couple animation">
+    //         <p class="bride-name">${brideName} & ${groomName}</p>
+    //     </div>
+    // `;
+    // };
+
+    const generateFigureOverlay = (bride) => {
+        const { couple: coupleImage } = bride;
 
         return `
         <div class="figure-wrapper">
             <img src="${coupleImage}" alt="Couple animation">
-            <p class="bride-name">${brideName} & ${groomName}</p>
         </div>
     `;
+    };
+
+    const generateBrideName = (bride) => {
+        const {
+            L: { name: brideLName },
+            P: { name: bridePName },
+        } = bride;
+
+        const brideName = brideLName.split(",")[0];
+        const groomName = bridePName.split(",")[0];
+
+        return `<p class="bride-name">${brideName} & ${groomName}</p>`;
     };
 
     const generateParameterContent = () => {
@@ -94,8 +116,21 @@ export const welcome = () => {
         }, 3000);
     });
 
+    // const initializeWelcome = () => {
+    //     figureElement.innerHTML = generateFigureOverlay(data.bride);
+    //     generateParameterContent();
+    //     addClassElement(welcomeElement, "active");
+    // };
+
     const initializeWelcome = () => {
         figureElement.innerHTML = generateFigureOverlay(data.bride);
+
+        // sisipkan nama pengantin sebelum "Dear..."
+        weddingToElement.insertAdjacentHTML(
+            "beforebegin",
+            generateBrideName(data.bride)
+        );
+
         generateParameterContent();
         addClassElement(welcomeElement, "active");
     };
